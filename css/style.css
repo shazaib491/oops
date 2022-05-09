@@ -59,3 +59,37 @@
     outline-offset: 10px;
 
 }
+
+.myclass{
+    /* text-decoration:underline;
+    text-decoration-color:aqua ;
+    text-decoration-style: solid;
+    text-decoration-thickness:5px; */
+    text-decoration: underline violet solid 10px;
+    text-transform: lowercase;
+    /* text-indent: -100px; */
+    /* text-shadow: 2px 2px 5px red; */
+    /* text-shadow: -3px 5px 6px rgba(255,26,26,0.22);
+    transform: rotate(38deg) scale(0.8) skew(-25deg) translate(92px,-68px);
+-webkit-transform: rotate(38deg) scale(0.8) skew(-25deg) translate(92px,-68px);
+-moz-transform: rotate(38deg) scale(0.8) skew(-25deg) translate(92px,-68px); */
+/* filter: blur(1px) hue-rotate(51deg) saturate(216%) opacity(76%);
+-webkit-filter: blur(1px) hue-rotate(51deg) saturate(216%) opacity(76%);
+-moz-filter: blur(1px) hue-rotate(51deg) saturate(216%) opacity(76%);
+background: #ff0000;
+background: linear-gradient(90deg,#ff0000 0%, #00ff00 80%);
+background: -webkit-linear-gradient(90deg,#ff0000 0%, #00ff00 80%);
+background: -moz-linear-gradient(90deg,#ff0000 0%, #00ff00 80%); */
+
+box-shadow: -5px -8px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -5px -8px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -5px -8px 5px 0px rgba(0,0,0,0.75);
+
+
+}
+
+p{
+    line-height: 20px;
+    white-space: nowrap;
+
+}
