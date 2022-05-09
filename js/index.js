@@ -115,12 +115,91 @@
 
 
 
-
+// fruits.forEach(function(elem){
+//     console.log(elem)
+// })
 // filter foreach map
-const fruits=["apple","banana","pinapple","strawberry"];
-fruits.forEach(function(elem){
-    console.log(elem)
+// // 1000====fruits
+
+
+// const fruits2=[...fruits];
+// fruits2[0]="AkashByNibuWale"
+// console.log(fruits)
+// console.log(fruits2)
+
+
+// find foreach filter finIndex map 
+// array bind => function(anotherFunction(elem,index)) => 
+// elem=banana
+// index=0,1,2,3
+// staticCopy=
+
+
+// find  function is used to find particular element its return specific value
+// const fruits=["apple","banana","pinapple","strawberry"];
+// let findElement=fruits.find(function(element,index,staticCopy){
+//     if(element==='banana'){
+//         return element;
+//     }
+// });
+
+// if(findElement){
+//     console.log("Banana is available")
+// }else{
+//     console.log("Banana is unavailable")
+
+// }
+    // console.log("Banana is available")
+
+// forEach
+//  const fruits=["apple","banana","pinapple","strawberry"];
+// fruits.forEach(function(element,index,staticCopy){
+//     console.log(element,index,staticCopy)
+// })
+
+// findIndex
+// const fruits=["apple","banana","pinapple","strawberry"];
+// let arrayIndex=fruits.findIndex(function(element,index,staticCopy){
+//     if(element==="strawberry")
+//         return element
+// })
+
+// console.log(arrayIndex)
+
+// map function is used to trasform the value of array its return new array
+// const number=[0,1,2,3,4,5];
+// let newArr=number.map(function(element,index,statiCopy){
+//     if(element==5){
+//         return element*10;
+//     }
+//     return element;
+// })
+
+// console.log(newArr)
+
+const number=[0,1,2,3,4,5];
+
+let latestArray=number.filter(function(element,index,staticCopy){
+    if(element!=3){ //element value not 3 
+        return element;
+    }
 })
+
+console.log(latestArray)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 
