@@ -1,0 +1,28 @@
+body{
+    color:darkslateblue;
+}
+
+/* all  element class  id     group  */
+*{
+    color:red;
+}
+
+p{
+    color:aquamarine;
+}
+
+#myclass{
+    color:yellowgreen;
+}
+
+#myclass1{
+    background-color:orange;
+}
+
+.heading{
+    background-color: royalblue;
+}
+
+.heading-color{
+    color:bisque;
+}

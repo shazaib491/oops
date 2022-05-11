@@ -1,3 +1,6 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
 .navbar-main{
     background-color: red;
 }
@@ -90,6 +93,23 @@ box-shadow: -5px -8px 5px 0px rgba(0,0,0,0.75);
 
 p{
     line-height: 20px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 
+}
+
+.font-style{
+    /* font: italic small-caps bold 12px/30px Georgia, serif; */
+    font-variant: small-caps;
+
+}
+
+h1{
+    /* font-variant: small-caps; */
+    font-weight:900;
+}
+
+.customColor{
+    color:darkslateblue;
+    text-align:center;
+    margin-left:100px;
 }
