@@ -1,28 +1,20 @@
-body{
-    color:darkslateblue;
+.row{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top:200px;
+    gap:50px 100px;
+    /* column-gap: 50px;
+    row-gap: 50px; */
+}
+.col{
+    padding: 50px;
+    background-color: aqua;
+    border:1px solid red;
+    text-align: center;
 }
 
-/* all  element class  id     group  */
-*{
-    color:red;
-}
 
-p{
-    color:aquamarine;
-}
-
-#myclass{
-    color:yellowgreen;
-}
-
-#myclass1{
-    background-color:orange;
-}
-
-.heading{
-    background-color: royalblue;
-}
-
-.heading-color{
-    color:bisque;
+.row-inline{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
 }
