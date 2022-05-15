@@ -1,33 +1,34 @@
-// DOM
-// DOCUMENT OBJECT MODEL
 
-// using id selector which is getElementById
-let id=document.getElementById("demo");
-console.log(id)
-// //overwrite
-// id.innerHTML="<h1>Hello Wolrd</h1>"
-// // adding dynamically css
-// id.style.color="red";
-// id.style.backgroundColor="aqua"
-// id.style.textAlign="center"
-// // using dynamic css it's mendatory to use camelCase
+let sm=document.querySelector("#sum");
+let sub=document.querySelector("#sub");
+let pro=document.querySelector("#pro");
+let div=document.querySelector("#div");
+let fno=document.querySelector("#fno");
+let sno=document.querySelector("#sno");
+// let p=document.querySelector("#demo");
+let container=document.querySelector(".container");
+let allClass=document.getElementsByClassName("demo");
 
-// // innertext or textContent or innerHTML is used to print the text of element
-// // innerText or textContent both are same but innerHTML render html not text
-
-// function changeColor(){
-//     id.style.color="green";
-//     id.style.backgroundColor="red"
-//     id.style.textAlign="right"
-// }
-// using class selector
-// getElementByClassName
-let className=document.getElementsByClassName("firstClass");
-// console.log(className[2].textContent)
-className[2].textContent="Hello Akash"
-
-
-for(let arr of className){
-    if(arr.textContent=="Hello Akash")
-        arr.style.color="red";
+console.log(allClass);
+// p.innerHTML=`
+//     <h1>Akash is good boy</h1>
+// `
+// p.setAttribute("class","text-center");
+// initialize varible for sum
+let sum=0;
+let subtraction=0;
+let multiply=0;
+let division=0;
+let =0;
+function calcuate(){
+    console.log(typeof fno.value)
+    sum=+fno.value + +sno.value;
+    subtraction=+fno.value - +sno.value;
+    multiply=+fno.value * +sno.value;
+    division=+fno.value / +sno.value;
+    console.log(sum,subtraction,multiply,division)
+    sm.innerHTML+=sum;
+    sub.innerHTML+=subtraction;
+    pro.innerHTML+=multiply;
+    div.innerHTML+=division;
 }
