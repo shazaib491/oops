@@ -27,7 +27,7 @@ function calcuate(){
     multiply=+fno.value * +sno.value;
     division=+fno.value / +sno.value;
     console.log(sum,subtraction,multiply,division)
-    sm.innerHTML+=sum;
+    sm.textContent+=sum;
     sub.innerHTML+=subtraction;
     pro.innerHTML+=multiply;
     div.innerHTML+=division;
