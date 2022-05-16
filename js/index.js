@@ -1,34 +1,44 @@
+// title body
+let show=document.querySelector("#result");
 
-let sm=document.querySelector("#sum");
-let sub=document.querySelector("#sub");
-let pro=document.querySelector("#pro");
-let div=document.querySelector("#div");
-let fno=document.querySelector("#fno");
-let sno=document.querySelector("#sno");
-// let p=document.querySelector("#demo");
-let container=document.querySelector(".container");
-let allClass=document.getElementsByClassName("demo");
+let blogs=[]
 
-console.log(allClass);
-// p.innerHTML=`
-//     <h1>Akash is good boy</h1>
-// `
-// p.setAttribute("class","text-center");
-// initialize varible for sum
-let sum=0;
-let subtraction=0;
-let multiply=0;
-let division=0;
-let =0;
-function calcuate(){
-    console.log(typeof fno.value)
-    sum=+fno.value + +sno.value;
-    subtraction=+fno.value - +sno.value;
-    multiply=+fno.value * +sno.value;
-    division=+fno.value / +sno.value;
-    console.log(sum,subtraction,multiply,division)
-    sm.textContent+=sum;
-    sub.innerHTML+=subtraction;
-    pro.innerHTML+=multiply;
-    div.innerHTML+=division;
+function save(event){
+    event.preventDefault();
+    console.log(event.target.title.value);
+    console.log(event.target.comments.value);
+    let blog={
+        title:event.target.title.value,
+        comments:event.target.comments.value
+    }
+    if(blog.title==='' || blog.comments===''){
+        alert("title and comments is required");
+        return ;
+    }
+    event.target.reset();
+    blogs.push(blog);
+    alert("detail saved");
+    shows();
 }
+
+
+function shows(){
+    if(blogs.length===0){
+        show.innerHTML=`<tr>
+            <td colspan=4>no data found</td>
+        </tr>`
+    }
+    show.innerHTML="";
+    blogs.forEach(function(element,index,staticCopy){
+        show.innerHTML+=`
+            <tr>
+                <td>${index+1}</td>
+                <td>${element.title}</td>
+                <td>${element.comments}</td>
+                <td>edit/delete</td>
+            </tr>
+        `
+    })
+}
+
+shows()
