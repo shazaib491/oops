@@ -1,7 +1,12 @@
 // title body
 let show=document.querySelector("#result");
-
+let updatedtitle=document.querySelector("#title");
+let comments=document.querySelector("#comments");
+let message=document.querySelector("#message");
+message.style.display="none";
 let blogs=[]
+let mode='insert';
+let index;
 
 function save(event){
     event.preventDefault();
@@ -12,12 +17,19 @@ function save(event){
         comments:event.target.comments.value
     }
     if(blog.title==='' || blog.comments===''){
-        alert("title and comments is required");
+        message.style.display="block";
+        message.innerHTML+="Title and Comments is Required";
         return ;
     }
     event.target.reset();
-    blogs.push(blog);
-    alert("detail saved");
+    if(mode=='insert'){
+        blogs.push(blog);
+        alert("detail saved");
+    }else{
+        blogs[index].title=blog.title;
+        blogs[index].comments=blog.comments;
+        mode="insert";
+    }
     shows();
 }
 
@@ -35,10 +47,37 @@ function shows(){
                 <td>${index+1}</td>
                 <td>${element.title}</td>
                 <td>${element.comments}</td>
-                <td>edit/delete</td>
+                <td>
+                <button class="btn btn-info" onclick=edit("${element.title}") ><i class="fa-solid fa-pen-to-square"></i></button>
+                <button class="btn btn-danger" onclick=removeRecord("${element.title}") ><i class="fa-solid fa-trash"></i></button>
+                </td>
             </tr>
         `
     })
 }
 
 shows()
+
+
+
+function removeRecord(title){
+    blogs=blogs.filter(function(element){
+        if(element.title!=title){
+            return element;
+        }
+    })
+    shows();
+}
+
+
+function edit(title){
+    index=blogs.findIndex(function(element){
+        if(element.title==title){
+            return element;
+        }
+    })
+    updatedtitle.value=blogs[index].title;
+    comments.value=blogs[index].comments;
+    mode="edit";
+
+}
