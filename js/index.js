@@ -59,8 +59,11 @@ shows()
 
 
 const removeRecord=(title)=>{
-    blogs=blogs.filter((element)=>element.title!=title)
-    shows();
+    let response=window.confirm("Do you want to remove this record");
+    if(response){
+        blogs=blogs.filter((element)=>element.title!=title)
+        shows();
+    }
 }
 
 
