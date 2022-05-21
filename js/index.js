@@ -8,14 +8,12 @@ let blogs=[]
 let mode='insert';
 let index;
 
-function save(event){
+const  save=(event)=>{
     event.preventDefault();
-    console.log(event.target.title.value);
-    console.log(event.target.comments.value);
-    let blog={
-        title:event.target.title.value,
-        comments:event.target.comments.value
-    }
+    let title=event.target.title.value;
+    let comments=event.target.comments.value;
+    let blog={title, comments}
+    
     if(blog.title==='' || blog.comments===''){
         message.style.display="block";
         message.innerHTML+="Title and Comments is Required";
@@ -34,14 +32,14 @@ function save(event){
 }
 
 
-function shows(){
+const shows=()=>{
     if(blogs.length===0){
         show.innerHTML=`<tr>
             <td colspan=4>no data found</td>
         </tr>`
     }
     show.innerHTML="";
-    blogs.forEach(function(element,index,staticCopy){
+    blogs.forEach((element,index,staticCopy)=>{
         show.innerHTML+=`
             <tr>
                 <td>${index+1}</td>
@@ -60,22 +58,14 @@ shows()
 
 
 
-function removeRecord(title){
-    blogs=blogs.filter(function(element){
-        if(element.title!=title){
-            return element;
-        }
-    })
+const removeRecord=(title)=>{
+    blogs=blogs.filter((element)=>element.title!=title)
     shows();
 }
 
 
-function edit(title){
-    index=blogs.findIndex(function(element){
-        if(element.title==title){
-            return element;
-        }
-    })
+const  edit=(title)=>{
+    index=blogs.findIndex((element)=>element.title==title)
     updatedtitle.value=blogs[index].title;
     comments.value=blogs[index].comments;
     mode="edit";
