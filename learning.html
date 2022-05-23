@@ -1,66 +1,83 @@
-<!DOCTYPE html> 
-<!-- it represent you are using html 5 -->
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Hasan Khan">
-  <meta name="viewport" content="width=device-width, initial-scale=3.0">
-  <!-- <meta http-equiv="refresh" content="2"> -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
+
 <body>
- <header>
-   this is header
-   &#65;
- </header>
- <nav>
-   <a href="">Home</a>
-   <a href="">Home </a>
-   <a href="">Home </a>
-   <a href="">Home </a>
-   <a href="">Home </a>
- </nav>
- <aside>
-  <a href="">Home</a>
-  <a href="">Home </a>
-  <a href="">Home </a>
-  <a href="">Home </a>
-  <a href="">Home </a>
- </aside>
- <main>
-   
-  <section>
-    <!-- carousel slider -->
-  </section>
-  <article>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repellendus excepturi alias vero. Veniam officia alias qui eum deserunt recusandae placeat, harum, dolor velit ratione, id repellendus pariatur nulla fuga?
-  </article>
+  <div class="row bg-dark text-light p-2">
+    <div class="col-md-6">
+      <span class="d-inline-block"><i class="fa-solid fa-envelope-open-text p-lg-2 p-md-2"></i> admin@gmail.com</span>
+      <span class="d-inline-block ms-3"><i class="fa-solid fa-phone p-lg-2 p-md-2"></i> 123456789</span>
+    </div>
+    <div class="col-md-6 text-end">
+      <i class="fa-brands p-lg-2 p-md-2 fa-facebook"></i>
+      <i class="fa-brands p-lg-2 p-md-2 fa-instagram-square"></i>
+      <i class="fa-brands p-lg-2 p-md-2 fa-google-plus"></i>
+      <i class="fa-brands p-lg-2 p-md-2 fa-twitter-square"></i>
+    </div>
+  </div>
 
-  <details>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita suscipit magni, quos, error hic ducimus mollitia exercitationem aperiam totam dolorem reprehenderit, voluptatum non asperiores consectetur eum repudiandae at corrupti.
-  </details>
-  <summary>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquam cumque nesciunt esse deleniti natus. Qui deleniti beatae animi quos explicabo delectus iure dicta debitis iste, cupiditate cumque at ducimus!
-    Eveniet vero iste, possimus tenetur voluptates aspernatur temporibus repellendus nobis esse. Saepe sunt deserunt cum aut minus quae, qui asperiores explicabo. Quis aliquam libero fuga quod reiciendis amet sint deleniti.
-    Quae, laboriosam? Officia consequuntur minima non eum, odit facere alias doloribus voluptates nostrum culpa saepe illo labore dicta rerum maiores ad nam impedit error reiciendis iusto temporibus! Molestias, aspernatur. Aut.
-    Illum, eaque magni, nesciunt facilis animi nostrum ratione ipsam consectetur odit dolores officiis eum harum voluptatibus tempore, quibusdam vel explicabo repellendus earum! Vero nisi tempora optio tenetur veniam vitae non!
-    Ea, veniam sint quidem ullam cupiditate perspiciatis sunt nobis autem temporibus ratione facere quod doloremque illo iusto dignissimos unde delectus! Maiores saepe inventore sint ullam quos quae dignissimos exercitationem corrupti!
-    Eaque reiciendis voluptatibus aut dolore quaerat nihil excepturi totam recusandae vitae itaque! Sed esse perferendis accusantium, repellat quae porro beatae tenetur eos, cupiditate amet quaerat atque culpa repudiandae nobis autem.
-    Asperiores qui quis sunt vero odio molestiae incidunt consequatur nostrum ipsum aperiam fugiat nemo rem quaerat harum, magni nihil laboriosam distinctio ad adipisci eaque consequuntur dolores velit. Reprehenderit, quaerat quis.
-    Dignissimos unde reiciendis laboriosam dolorem totam architecto atque rerum laborum, sed id suscipit! Eius suscipit, provident in numquam labore corporis esse dolorum explicabo dolore, assumenda consequatur id tempore totam sit?
-    Cum quasi excepturi tempore iure ullam nesciunt cupiditate quis et! At repellat non a quisquam amet molestiae necessitatibus delectus consectetur omnis repellendus. Expedita earum rerum praesentium ratione suscipit, consequuntur magni.
-    Nulla necessitatibus soluta laborum facere quas optio! Praesentium reprehenderit voluptatem sint impedit, quis recusandae ipsum, amet aliquam, optio perferendis obcaecati iste porro a suscipit iure odit itaque libero. Voluptatem, iste.
-  </summary>
- </main>
- <footer>
-   design hasan raza @hasanMail
- </footer>
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-primary ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        Globals Industries
+        <!-- <img src="./images/logo/logo.png" style="height:70px" alt=""> -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link ">ContactUs</a>
+          </li>
+         
+        </ul>
+        <!-- for authentication -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Register</a>
+          </li>
+         
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
+  <script src="./css/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./css/bootstrap/js/bootstrap.bundle.js"></script>
+
 </body>
+
 </html>
-
-

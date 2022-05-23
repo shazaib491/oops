@@ -59,3 +59,36 @@ display()
 
 
 // promise json fetch 
+
+// console.log(_.sortedIndex([10, 20, 30, 50], 40));
+// let student=[
+//     {
+//         name:'admin',
+//         email:"admin@example.com",
+//         hindi:100,
+//         english:90,
+//         math:20
+//     },
+//     {
+//         name:'shazab',
+//         email:"admin@example.com",
+//         hindi:50,
+//         english:90,
+//         math:20
+//     }
+// ]
+
+
+// let arr=_.uniqBy(student,'math');
+// console.log(arr);
+
+let count=_.countBy([6.1, 4.2, 6.3],Math.floor);
+console.log(count)
+
+var users = [
+    { 'user': 'barney', 'age': 36, 'active': false },
+    { 'user': 'fred',   'age': 40, 'active': false }
+  ];
+let jrr= _.every(users,  { 'user': 'barney', 'age': 36, 'active': false },
+{ 'user': 'fred',   'age': 40, 'active': false });
+console.log(jrr)
