@@ -28,6 +28,8 @@ const  save=(event)=>{
         blogs[index].comments=blog.comments;
         mode="insert";
     }
+    let blogsArr=JSON.stringify(blogs);
+    localStorage.setItem("blogsArr",blogsArr);
     shows();
 }
 
@@ -39,19 +41,24 @@ const shows=()=>{
         </tr>`
     }
     show.innerHTML="";
-    blogs.forEach((element,index,staticCopy)=>{
-        show.innerHTML+=`
-            <tr>
-                <td>${index+1}</td>
-                <td>${element.title}</td>
-                <td>${element.comments}</td>
-                <td>
-                <button class="btn btn-info" onclick=edit("${element.title}") ><i class="fa-solid fa-pen-to-square"></i></button>
-                <button class="btn btn-danger" onclick=removeRecord("${element.title}") ><i class="fa-solid fa-trash"></i></button>
-                </td>
-            </tr>
-        `
-    })
+    let blogData=localStorage.getItem("blogsArr");
+    blogData=JSON.parse(blogData);
+    if(blogData){
+        blogData.forEach((element,index,staticCopy)=>{
+            show.innerHTML+=`
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${element.title}</td>
+                    <td>${element.comments}</td>
+                    <td>
+                    <button class="btn btn-info" onclick=edit("${element.title}") ><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button class="btn btn-danger" onclick=removeRecord("${element.title}") ><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            `
+        })
+    }
+  
 }
 
 shows()
