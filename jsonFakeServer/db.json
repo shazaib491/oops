@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "title": "json-server",
+      "author": "rishubh",
+      "id": 8
+    },
+    {
+      "title": "json-server",
+      "author": "rishubh",
+      "id": 9
+    }
+  ],
+  "comments": [],
+  "profile": {}
+}

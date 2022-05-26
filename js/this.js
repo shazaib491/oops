@@ -121,11 +121,11 @@
 
 // json javascript object notation
 // javascript object notation
-let user=[{
-    name:"admin",
-    email:"admin@gmail.com",
-    mobile:12345678
-}]
+// let user=[{
+//     name:"admin",
+//     email:"admin@gmail.com",
+//     mobile:12345678
+// }]
 
 // data kahi per send krne k liye koise lang me c c++ python java
 // object to string
@@ -151,23 +151,97 @@ let user=[{
 // localStorage.clear()
 
 
-const User=new Promise((resolve,reject)=>{
-    let age=18;
-    setTimeout(()=>{
-        if(age>=18){
-            resolve("promise resolve")
-        }else{
-            // reject("reject you are not eligibile")
-            return Promise.reject("reject you are not eligibile")
-        }
-    },1000)
+// const User=new Promise((resolve,reject)=>{
+//     let age=18;
+//     setTimeout(()=>{
+//         if(age>=18){
+//             resolve("promise resolve")
+//         }else{
+//             // reject("reject you are not eligibile")
+//             return Promise.reject("reject you are not eligibile")
+//         }
+//     },1000)
    
+// })
+
+// User.then((response)=>{
+//     console.log(response);
+// }).catch((error)=>{
+//     console.log(error);
+// })
+// let resolution= new Promise((resolve,reject)=>{
+//     let flag=false;
+//     if(flag){
+//         resolve("Data feteched")
+//     }else{
+//         reject("Data reject");
+//     }
+// })
+
+// resolution.then((resolve)=>{
+//     console.log(resolve)
+// }).catch((error)=>{
+//     console.log(error);
+// })
+
+
+
+
+// const req=new XMLHttpRequest();
+// req.open("filename.txt",()=>{
+
+// })
+
+// function getFile() {
+//   let req = new XMLHttpRequest();
+//   req.open('GET', "./index.txt");
+//   req.onload = function() {
+//     if (req.status == 200) {
+//         console.log(this.responseText)
+//     } else {
+//         console.log(this.responseText)
+
+//     }
+//   }
+//   req.send();
+// }
+
+// getFile()
+let todo={
+      title: "json-server",
+      author: "rishubh"
+}
+
+// fetch("http://localhost:3000/comments").then((response)=>{
+//     console.log(response)
+//     response.json().then((data)=>{
+//         console.log(data)
+//     })
+// }).catch(error=>{
+//     console.log(error);
+// })
+
+getDataFromServer=()=>{
+    fetch("http://localhost:3000/posts",{
+        method:"POST",
+        body:JSON.stringify(todo),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+    }).then((response)=>{
+        response.json().then((data)=>{
+            console.log(data)
+        })
+    }).catch(error=>{
+        console.log(error)
+    })
+}
+
+// getDataFromServer()
+
+
+fetch("http://localhost:3000/posts/7",{
+    method:"DELETE"
+}).then((data)=>{
+    console.log(data)
 })
-
-User.then((response)=>{
-    console.log(response);
-}).catch((error)=>{
-    console.log(error);
-})
-
-
