@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -57,17 +58,17 @@
             <a class="nav-link ">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ">ContactUs</a>
+            <a class="nav-link " href="./contact.html">ContactUs</a>
           </li>
          
         </ul>
         <!-- for authentication -->
         <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
           <li class="nav-item me-md-2">
-            <a class="btn btn-light rounded-pill" aria-current="page" href="#">Login</a>
+            <a class="btn btn-light rounded-pill" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
           </li>
           <li class="nav-item ">
-            <a class="btn btn-dark rounded-pill" aria-current="page" href="#">Register</a>
+            <a class="btn btn-dark rounded-pill" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#RegisterModal" >Register</a>
           </li>
          
         </ul>
@@ -132,7 +133,11 @@
 <div class="container">
 
 <div class="row p-md-3">
-  <div class="col-md-4">
+  <div class="col-md-4" 
+  data-aos="fade-up"
+ 
+  
+  >
     <div class="card" style="width:350px">
       <img src="./images/bg-1.png" class="card-img-top" style="height:250px ;" alt="">
       <div class="card-body">
@@ -146,7 +151,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4 mt-md-0 mt-3">
+  <div class="col-md-4 mt-md-0 mt-3" data-aos="fade-up">
     <div class="card" style="width:350px">
       <img src="./images/bg-1.png" class="card-img-top" style="height:250px ;" alt="">
       <div class="card-body">
@@ -160,7 +165,7 @@
       </div>
     </div>
   </div>
-  <div class="col-md-4 mt-md-0 mt-3">
+  <div class="col-md-4 mt-md-0 mt-3" data-aos="fade-up">
     <div class="card" style="width:350px">
       <img src="./images/bg-1.png" class="card-img-top" style="height:250px ;" alt="">
       <div class="card-body">
@@ -266,10 +271,114 @@
   </div>
 </div>
 
+ <!-- *************************************************** -->
+<!-- Modal for Login -->
+ <!-- *************************************************** -->
+
+<div class="modal fade "  data-bs-backdrop="static" data-bs-keyboard="false"  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 m-auto">
+            <form action="">
+              
+              <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control">
+              </div>
+             
+              <div class="text-center p-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="reset" class="btn btn-dark ms-3">Reset</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- *************************************************** -->
+<!-- Modal for Register -->
+ <!-- *************************************************** -->
+
+
+  <!-- *************************************************** -->
+<!-- Modal for Register -->
+ <!-- *************************************************** -->
+
+<div class="modal fade "  data-bs-backdrop="static" data-bs-keyboard="false"  id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6 m-auto">
+            <form action="">
+              <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="text-center p-3">
+                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="reset" class="btn btn-dark ms-3">Reset</button>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- *************************************************** -->
+<!-- Modal for Register -->
+ <!-- *************************************************** -->
+
  <!-- *************************************************** 
                  Footer section close
  *************************************************** -->
-
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+   AOS.init();
+ </script>
   <script src="./css/bootstrap/js/bootstrap.min.js"></script>
   <script src="./css/bootstrap/js/bootstrap.bundle.js"></script>
 
